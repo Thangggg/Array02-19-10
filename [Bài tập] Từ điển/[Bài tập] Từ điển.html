@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập từ cần dịch: <input type="text" id="t1">
+<input type="button" value="Dịch" onclick="checkForm()">
+<p id="t2"></p>
+<script>
+    let english = [ "dog", "cat" , "mouse" , "chicken" , "duck" ];
+    let vietNam = ["chó", "mèo", "chuột", "gà", "vịt"];
+
+    function checkForm(){
+        let t1 = document.getElementById('t1').value;
+        for (let i = 0; i < english.length; i++) {
+            if (english[i] === t1){
+                document.getElementById('t2').innerHTML = vietNam[i]
+            }if (vietNam[i] === t1){
+                document.getElementById('t2').innerHTML = english[i]
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

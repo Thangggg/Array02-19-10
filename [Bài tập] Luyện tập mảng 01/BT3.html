@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="number">
+<input type="button" value="Display" onclick="checkDis();">
+<div id="result"></div>
+<div id="result2"></div>
+<div id="result3"></div>
+<script>
+    let array = new Array(10);
+    for (let i = 0; i < array.length; i++) {
+        array[i] = Math.round(Math.random()*100)
+    }
+    function checkDis(){
+        let max = array[0];
+        let ketQua = 0
+        let value = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] > max){
+                max = array[i]
+            }
+            ketQua = ketQua + array[ i ];
+            value = value + array[i] + "<br>"
+        }
+        document.getElementById('result2').innerHTML = "Số lớn nhất là : " + max
+        document.getElementById('result').innerHTML = value
+        document.getElementById('result3').innerText = "Trung bình cộng của mảng = " + ketQua/array.length
+    }
+</script>
+</body>
+</html>

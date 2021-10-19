@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="number"/>
+<input type="button" value="Add" onclick="checkAdd();">
+<input type="button" value="Display" onclick="checkDis();"/>
+<div id="result"></div>
+<div id="result2"></div>
+<script>
+    let x = 0;
+    let array = [];
+
+    function checkAdd() {
+            array[x] = document.getElementById("number").value;
+            x++ ;
+    }
+    function checkDis() {
+        let value = "<hr/>";
+        for (let i = 0; i < array.length; i++) {
+            value = value + "Element " + i + " = " + array[i] + "<br/>";
+        }
+        document.getElementById("result").innerHTML = value;
+        let value1 = "<hr/>";
+        for (let i = 0; i < array.length; i++) {
+            if(array[i] >= 10) {
+                value1 = value1 + " Số lớn hơn 10 là : " + array[i] + "<br/>";
+            }
+        }
+        document.getElementById("result2").innerHTML = value1;
+
+    }
+
+
+</script>
+</body>
+</html>

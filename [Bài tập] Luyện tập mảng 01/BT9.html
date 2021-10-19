@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Mảng 1 :<div id="result"></div>
+Mảng 2 : <div id="result2"></div>
+Mảng 3 = mảng 1 + mảng 2:<div id="result3"></div>
+<script>
+    let arr = new Array(10);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = Math.round(Math.random()*100)
+    }
+
+    let arr2 = new Array(10);
+    for (let j = 0; j < arr2.length; j++) {
+        arr2[j] = Math.round(Math.random()*100)
+    }
+
+    let arr3 = arr.concat(arr2);
+    document.getElementById('result3').innerHTML = arr3
+    document.getElementById('result2').innerHTML = arr2
+    document.getElementById('result').innerHTML = arr
+
+</script>
+</body>
+</html>
