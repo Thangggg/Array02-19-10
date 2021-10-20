@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="str1">
+<br>
+<br>
+<input type="text" id="str2">
+<br>
+<br>
+
+<input type="button" value="Kiểm Tra" onclick="check()">
+
+<div id="result"></div>
+<script>
+    let arr1 = [];
+    let arr2 = [];
+    let i = 0;
+
+    function check() {
+        arr1[i] = document.getElementById('str1').value;
+        arr2[i] = document.getElementById('str2').value;
+        i++;
+        document.getElementById('str1').value = "";
+        document.getElementById('str2').value = "";
+        console.log(arr1)
+        console.log(arr2)
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] === arr2[i]){
+                document.getElementById('result').innerHTML = "2 chuỗi này giống nhau "
+            }else {
+                document.getElementById('result').innerHTML = "2 chuỗi này không giống nhau "
+            }
+        }
+
+    }
+
+
+</script>
+</body>
+</html>

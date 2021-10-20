@@ -7,7 +7,7 @@
 <body>
 Mảng có các giá trị là : <div id="result"></div>
 <br>
-Sắp xếp từ nhỏ đến lớn :<div id="result2"></div>
+Sắp xếp từ lớn về nhỏ :<div id="result2"></div>
 <script>
     let arr = new Array(10);
     for (let i = 0; i < arr.length; i++) {
@@ -15,7 +15,7 @@ Sắp xếp từ nhỏ đến lớn :<div id="result2"></div>
     }document.getElementById('result').innerHTML = arr;
 
     let nghich = arr.sort(function (a, b){
-        return a - b
+        return b - a
     })
     document.getElementById('result2').innerHTML = nghich
 
